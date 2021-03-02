@@ -305,9 +305,9 @@ header .row{
   color: #406A65;
 }
 
-.sticky .nav-main{
-  /*display: none;*/
-}
+/*.sticky .nav-main {
+  display: none;
+}*/
 .sticky .nav-sticky{
   top: 0;
 }
@@ -471,7 +471,7 @@ header .row{
 }
 .categories > .cate-item > a figure img{
   width: auto;
-}
+} 
 .categories > .cate-item > a figcaption{
   text-align: center;
   color: #184D47;
@@ -543,7 +543,6 @@ header .row{
   display: block;
   text-align: center;
   overflow: hidden;
-  vertical-align: middle;
 }
 .socail > li > a svg{
   width: 20px;
@@ -562,6 +561,35 @@ header .row{
   height: 22px;
   color: #FBF7EA;
 }
+.socail > li:last-child{
+  width: auto;
+  background-color: transparent !important;
+  border-width: 0;
+  border-radius: 0;
+  line-height: 2;
+  position: relative;
+  padding-left: 1rem;
+}
+.socail > li:last-child a{
+  line-height: 3;
+  vertical-align: middle;
+}
+.socail > li:last-child a .bi{
+  line-height: 2;
+  vertical-align: super;
+}
+.socail > li:last-child::after{
+  content: "";
+  display: block;
+  width: 1px;
+  height: 100%;
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+}
+
 .contact-section h1,
 .contact-section h2,
 .contact-section h3,
@@ -655,7 +683,7 @@ header .row{
   background-color: #FAD586;
   overflow: hidden;
   width: 50%;
-  height: 50vh;
+  height: 42vh;
 }
 .video-img::after{
   content: "";
@@ -1115,6 +1143,7 @@ header .row{
 .post-container{
   padding-left: 15px;
   padding-right: 15px;
+  overflow: visible;
 }
 .post-list{
   -webkit-box-orient: horizontal;
@@ -1130,11 +1159,12 @@ header .row{
   width: auto;
   margin-left: -15px;
   margin-right: -15px;
+  overflow: visible;
 }
 .post-list li {
-  margin-left: 0;
-  margin-right: 0;
-  margin-bottom: 0;
+  margin-left: 0.5%;
+  margin-right: 0.5%;
+  margin-bottom: 15px;
   opacity: 1;
   padding: 0px;
   -webkit-transition: all 0.3s ease;
@@ -1146,6 +1176,9 @@ header .row{
   overflow: hidden;
   cursor: pointer;
   align-self: self-start;
+  flex: 0 0 32.3333%;
+  width: 32.3333%;
+  box-shadow: 0px 3px 15px rgb(0, 0, 0, 0.15);
 }
 .post-list .d-post-right{
   display: flex;
@@ -1186,6 +1219,7 @@ header .row{
   margin-bottom: 0;
   width: 100%;
   height: auto;
+  max-height: 225px;
   background-color: rgba(0, 0, 0, 0.16);
   overflow: hidden;
   position: relative;
@@ -1284,30 +1318,46 @@ header .row{
   border-radius: 24px;
   margin-left: 5px;
   margin-right: 5px;
+  height: 32px;
+  width: 50px;
 }
 .pagination li a{
   padding-left: 15px;
   padding-right: 15px;
-  color: #CECECE;
+  color: #FAD586;
   text-align: center;
   font-weight: 300;
   -webkit-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  line-height: 1.7;
+  display: block;
 }
-.pagination li a .bi {
-  line-height: 1;
+.pagination li.btn-nav{
+  background-color: #FFFFFF;
+  border-color: #FFFFFF;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.pagination li.btn-nav a{
+  padding-left: 0;
+  padding-right: 0;
+}
+.pagination li.btn-nav a .bi {
+  line-height: 0.7;
   vertical-align: top;
-  color: #FBF7EA;
+  color: #184D47;
 }
 .pagination li a:hover,
 .pagination li:hover a{
-  color: #FFF3C7;
+  color: #FAD586;
   opacity: 1;
   font-weight: 400;
 }
 .pagination li.active {
-  background-color: #FFF3C7;
+  background-color: #FAD586;
+  border-color: #FAD586;
+  font-weight: 700;
 }
 .pagination li.active a{
   color: #184D47;
@@ -1755,7 +1805,105 @@ textarea.form-control:focus{
 footer{
   background: rgba(251, 247, 234, 1);
   border-bottom: 3px solid rgba(24, 77, 71, 1);
+  position: relative;
 }
+footer .section{
+  padding-top: 150px;
+}
+.temperature{
+  background-color: #FFFFFF;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: 320px;
+  width: 100%;
+  flex: 0 0 100%;
+  padding-top: 0.65rem;
+  padding-bottom: 0.65rem;
+
+  position: absolute;
+  top: 30px;
+  right: 30px;
+}
+.temperature::after{
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1px;
+  height: 100%;
+  background-color: #BDBDBD;
+}
+.temperature .col-6 *{
+  color: #444;
+  text-align: center;
+}
+.temperature .col-6:first-of-type{
+  padding-left: 0.625rem;
+  padding-right: 0;
+  color: #444;
+  display: flex;
+  align-items: center;
+}
+.temperature .col-6:first-of-type .col-6{
+  padding-left: 0;
+  padding-right: 0.625rem;
+}
+.temperature .col-6:last-of-type{
+  text-align: left;
+  padding-right: 0.625rem;
+  padding-left: 1rem;
+}
+.temperature .col-6:first-of-type.icon{
+  display: inline-block;
+  padding-left: 0;
+  padding-right: 0;
+}
+.temperature .col-6:first-of-type.icon img{
+  text-align: center;
+  display: block;
+  width: 75%;
+  height: auto;
+  margin: 0 auto;
+}
+.temperature .col-6:last-of-type.number{
+  font-size: 2.25rem;
+  line-height: 1.6;
+  color: #444;
+  display: inline-block;
+  padding-right: 0.625rem;
+}
+.temperature .col-6:last-of-type.number small{
+  font-size: 1rem;
+  color: #444;
+}
+.temperature label,
+.temperature span,
+.temperature small{
+  margin-bottom: 0;
+}
+.temperature .meta-tem{
+  margin-bottom: 0;
+  text-align: left;
+}
+.temperature .meta-tem li{
+  text-align: left;
+}
+.temperature .meta-tem li label,
+.temperature .meta-tem li span{
+  text-align: left;
+  font-size: 0.9rem;
+}
+.temperature .meta-tem li label::after{
+  content: ":";
+  display: inline-block;
+  margin-left: 0.2rem;
+  margin-right: 0.25rem;
+}
+
 .footer-menu {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -2129,9 +2277,9 @@ article .title::after{
   .nav-mb{
     display: none;
   }
-  .main:not(.body){
-    /*margin-top: -100px;*/
-  }
+  /*.main:not(.body){
+    /*margin-top: -100px;
+  }*/
   .dropdown-toggle{
     margin-right: 0;
     -webkit-transition: none;
@@ -2416,6 +2564,7 @@ article .title::after{
   }
   h2, .h2{
     font-size: 1.25rem !important;
+    text-transform: uppercase;
   }
   h3, .h3{
     font-size: 1.15rem !important;
@@ -2489,10 +2638,10 @@ article .title::after{
     padding-left: 15px;
     padding-right: 15px;
   }
-  .text-section .content-section{
+  /*.text-section .content-section{
     /*padding-left: 15px;
-    padding-right: 15px;*/
-  }
+    padding-right: 15px;
+  }*/
   .text-section{
     padding-top: 50px;
     padding-left: 15px;
