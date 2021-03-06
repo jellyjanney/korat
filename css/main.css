@@ -1217,6 +1217,7 @@ header .row{
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
   border: 0px solid #EDEDED;
+  background-color: #fff;
   box-sizing: border-box;
   border-radius: 10px;
   overflow: hidden;
