@@ -1232,15 +1232,17 @@ header .row{
   text-align: left;
 }
 .post-list li figcaption h3{
-  font-size: 18px;
+  font-size: 1.025em;
   color: #000000;
   font-weight: 500;
   text-align: left;
   padding: 5px 15px 0px;
+  margin-bottom: 0;
 }
 .post-list li figcaption small{
   text-align: left;
   padding: 5px 15px 15px;
+  color: rgba(0, 0, 0, 0.5);
 }
 .post-list li figcaption p{
   text-align: center;
@@ -1952,6 +1954,22 @@ footer .section{
   display: inline-block;
   margin-left: 0.2rem;
   margin-right: 0.25rem;
+}
+footer .contact-section .socail{
+  text-align: left;
+  -webkit-box-pack: left;
+  -ms-flex-pack: left;
+  justify-content: left;
+}
+footer .contact-section .socail li{
+  width: 48px;
+  height: 48px;
+}
+footer .contact-section .socail li.tel{
+  width: auto;
+}
+footer .contact-section .socail li.tel a{
+  line-height: 3.5;
 }
 
 .footer-menu {
