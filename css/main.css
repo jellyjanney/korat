@@ -402,6 +402,35 @@ header .row{
   background: #FAD586;
   color: #FBF7EA;
 }
+.btn-second{
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.125px;
+  color: #184D47 !important;
+  min-width: 200px;
+  height: 48px;
+  background: #FAD586;
+  border-radius: 30px;
+  border: 0;
+  line-height: 2.2;
+  /*-webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;*/
+}
+.btn-second:active,
+.btn-second:focus,
+.btn-second:hover{
+  background: #FAD586;
+  color: #FBF7EA;
+  opacity: 1;
+}
+.btn-second:not(:disabled):not(.disabled):active, 
+.btn-second:not(:disabled):not(.disabled).active, 
+.show > .btn-second.dropdown-toggle{
+  background: #FAD586;
+  color: #FBF7EA;
+}
 
 /****** Main *******/
 .text-primary {
@@ -494,7 +523,7 @@ header .row{
 .categories > .cate-item > a figcaption h5{
   color: #184D47;
   text-transform: uppercase;
-  padding: 0px 0px 0.25rem;
+  padding: 0px 0px 0.125rem;
   margin-bottom: 0;
 }
 .categories > .cate-item > a figcaption p{
@@ -1162,9 +1191,9 @@ header .row{
   overflow: visible;
 }
 .post-list li {
-  margin-left: 0.5%;
-  margin-right: 0.5%;
-  margin-bottom: 15px;
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 10px;
   opacity: 1;
   padding: 0px;
   -webkit-transition: all 0.3s ease;
@@ -1228,27 +1257,29 @@ header .row{
   height: 105px;
 }
 .post-list li figcaption{
-  padding: 20px 5px;
+  padding: 20px 5px 15px;
   background: #FFFFFF;
   text-align: left;
 }
 .post-list li figcaption h3{
   font-size: 1.025em;
-  color: #000000;
+  color: #184D47;
   font-weight: 500;
   text-align: left;
+  letter-spacing: 0.125px;
   padding: 5px 15px 0px;
   margin-bottom: 0;
 }
 .post-list li figcaption small{
   text-align: left;
   padding: 5px 15px 15px;
-  color: rgba(0, 0, 0, 0.5);
+  color: #BDBDBD;
 }
 .post-list li figcaption p{
   text-align: center;
   text-align: left;
   padding: 5px 15px 15px;
+  margin-bottom: 0;
 }
 .post-container h4::after{
   content: "";
