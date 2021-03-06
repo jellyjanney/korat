@@ -542,7 +542,7 @@ header .row{
   color: #184D47;
   text-transform: uppercase;
   padding: 0px 0px 0.125rem;
-  margin-bottom: 0;
+  margin-bottom: 0.25rem;
   font-weight: 600;
 }
 .categories > .cate-item > a figcaption p{
