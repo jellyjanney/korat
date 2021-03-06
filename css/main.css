@@ -508,7 +508,7 @@ header .row{
   -webkit-box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.16);
           box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.16);
   border: 0px solid #707070;
-  border-radius: 10px;
+  border-radius: 12px;
   background-color: #FFFFFF;
   padding: 0px;
   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
@@ -522,7 +522,10 @@ header .row{
   width: 100%;
   height: auto;
   background-color: rgba(0, 0, 0, 0.16);
+  margin-bottom: 0;
   overflow: hidden;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
 }
 .categories > .cate-item > a figure img{
   width: auto;
@@ -547,11 +550,11 @@ header .row{
 }
 .categories > .cate-item > a:hover figcaption,
 .categories > .cate-item:hover > a figcaption{
+  background-color: #406A65;
   color: #184D47;
   opacity: 1;
 }
 .categories > .cate-item > a:hover{
-  background-color: #406A65;
   color: #184D47;
   opacity: 1;
 }
