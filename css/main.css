@@ -501,7 +501,6 @@ header .row{
           flex: 0 0 25%;
   width: 25%;
   padding: 10px;
-  cursor: pointer;
 }
 .categories > .cate-item > a {
   width: 100%;
@@ -517,6 +516,7 @@ header .row{
       -o-transition: all 0.3s;
         transition: all 0.3s;
   overflow: hidden;
+  cursor: pointer;
 }
 .categories > .cate-item > a figure{
   width: 100%;
@@ -549,14 +549,12 @@ header .row{
   color: #184D47;
   opacity: 1;
 }
-.categories > .cate-item > a:hover,
-.categories > .cate-item:hover > a{
-  background-color: rgba(24, 77, 71, 0.64);
+.categories > .cate-item > a:hover{
+  background-color: #406A65;
   color: #184D47;
   opacity: 1;
 }
-.categories > .cate-item > a:hover figcaption h5,
-.categories > .cate-item:hover > a figcaption h5{
+.categories > .cate-item > a:hover figcaption h5{
   color: #FFF3C7;
 }
 .socail{
