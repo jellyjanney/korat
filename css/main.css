@@ -494,7 +494,8 @@ header .row{
 .categories > .cate-item > a figcaption h5{
   color: #184D47;
   text-transform: uppercase;
-  padding: 0px 0px 15px;
+  padding: 0px 0px 0.25rem;
+  margin-bottom: 0;
 }
 .categories > .cate-item > a figcaption p{
   color: #BDBDBD;
