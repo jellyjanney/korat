@@ -540,6 +540,7 @@ header .row{
   text-transform: uppercase;
   padding: 0px 0px 0.125rem;
   margin-bottom: 0;
+  font-weight: 600;
 }
 .categories > .cate-item > a figcaption p{
   color: #BDBDBD;
