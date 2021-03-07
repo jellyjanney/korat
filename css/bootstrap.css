@@ -575,7 +575,7 @@ pre code {
 
 @media (min-width: 1200px) {
   .container, .container-sm, .container-md, .container-lg, .container-xl {
-    max-width: 1140px;
+    max-width: 1190px;
   }
 }
 
@@ -6622,10 +6622,10 @@ a.close.disabled {
   left: 15%;
   z-index: 10;
   padding-top: 20px;
-  padding-bottom: 20px;
+  padding-bottom: 0;
   color: #fff;
   text-align: center;
-  transform: translateY(-50%);
+  transform: translateY(-25%);
 }
 
 @-webkit-keyframes spinner-border {
