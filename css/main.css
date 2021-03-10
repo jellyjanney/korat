@@ -20,7 +20,9 @@ body{
   scroll-behavior: smooth;
 }
 img{
+  display: block;
   max-width: 100%;
+  width: 100%;
   height: auto;
 }
 
@@ -492,6 +494,9 @@ header .row{
 /****** Main *******/
 .text-primary {
   color: #184D47 !important;
+}
+.text-gray{
+  color: #444444 !important;
 }
 .text-second {
   color: #FAD586 !important;
@@ -1726,18 +1731,19 @@ header .row{
 .form-control,
 input:not([type="submit"]){
   outline: 0px none;
-  border: 1px solid rgba(0, 0, 0, 0);
-  border-bottom: 2px solid rgba(64, 106, 101, 1);
+  border: 0px solid rgba(0, 0, 0, 0);
+  border-bottom: 2px solid #444444 !important;
   border-radius: 0;
-  color: #000000;
+  color: #444444;
   font-weight: 400;
   height: 38px;
   -webkit-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  padding-left: 30px;
 }
 .form-control:focus,
-input:focus{
+input:not([type="submit"]):focus{
   outline: 0px !important;
   -webkit-box-shadow: none !important;
           box-shadow: none !important;
@@ -1750,28 +1756,37 @@ input:focus{
   -webkit-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  position: relative;
 }
-.form-group label{
+.form-group label:not(.label){
   text-align: left;
   width: 100%;
   -webkit-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  color: white;
+}
+.form-group .label{
+  bottom: 35px;
+  position: absolute;
+  left: 7px;
+  margin-bottom: 0;
+  color: #444444 !important;
+}
+.form-group .label.msg{
+  bottom: 11px;
 }
 textarea.form-control{
   height: 38px;
-  border: 1px solid rgba(0, 0, 0, 0);
-  border-bottom: 2px solid #184D47;
+  border: 0px solid rgba(0, 0, 0, 0);
+  border-bottom: 2px solid #444444 !important;
   overflow: hidden;
   border-radius: 0;
   -webkit-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
-}
-textarea.form-control:focus{
-  height: 78px;
-  overflow: auto;
-  border-color: rgba(24, 77, 71, 1);
+  padding-left: 30px;
+  color: #444444;
 }
 .btn-green{
   background-color: #184D47;
@@ -1786,6 +1801,24 @@ textarea.form-control:focus{
 .btn-green:hover{
   opacity: 1;
   color: #FAD586 !important;
+}
+.form-group input:focus + label:not(.label), 
+.form-group select:focus + label:not(.label), 
+.form-group textarea:focus + label:not(.label) {
+  opacity: 1;
+}
+
+@media only screen and (min-width: 1600px){
+  .carousel-inner{
+    height: 80vh;
+  }
+}
+@media only screen and (min-width: 1000px){
+  .form-contact .contentform{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 /* Timeline */
@@ -1893,6 +1926,7 @@ textarea.form-control:focus{
   border-radius: 12px;
   box-shadow: 0px 3px 8px rgba(0,0,0,0.15);
   max-height: 100%;
+  width: auto;
   display: block;
   text-align: center;
   margin: auto;
@@ -1924,7 +1958,7 @@ textarea.form-control:focus{
 .detail-section figure{
   margin-bottom: 30px;
   width: 100%;
-  height: 80vh;
+  max-height: 80vh;
   background-color: rgba(0, 0, 0, 0.16);
   overflow: hidden;
 }
@@ -3492,5 +3526,15 @@ article .title::after{
   }
   h6{
     font-size: 0.75rem !important;
+  }
+}
+
+@media only screen and (min-width: 1900px){
+  .section{
+    padding-top: 180px;
+    padding-bottom: 180px;
+  }
+  .bg-contact:last-child::before{
+    top: 70%;
   }
 }
